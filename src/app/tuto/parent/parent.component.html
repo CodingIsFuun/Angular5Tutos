@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Parent component</h1>
+        <p class="lead">I'm the parent, listen to me !!!!</p>
+        <hr class="my-4">
+    </div>
+
+
+    <div class="container">    
+        <h3 class="display-3">Create task for my child</h3>
+
+      <form>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" [(ngModel)]="task.description" id="description" name="description" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" [(ngModel)]="task.location" id="location" name="location" placeholder="Enter task's location" >
+        </div>
+      </form>
+    </div>
+
+</div>
+
+<div class="container">
+    <app-child [task]="task"></app-child>
+</div>
