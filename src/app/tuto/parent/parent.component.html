@@ -1,3 +1,9 @@
+<!--This is the parent component 
+    I created 2 input fields that are binded to the model class Task
+    This parent contains a child container that has a selector 'app-child'
+    Our goal is to pass our Task object which is an attribute of parent component to child component
+-->
+
 <div class="jumbotron">
     <div class="container">
         <h1 class="display-3">Parent component</h1>
@@ -23,6 +29,11 @@
 
 </div>
 
+<!--This is the child component 
+    To bind the Task object from parent to child component we need 2 things
+        1) Add @Input() attribute in child component
+        2) Add [task]="task" in the child directive, which means that we want to pass the task object from our parent component to its child
+-->
 <div class="container">
     <app-child [task]="task"></app-child>
 </div>

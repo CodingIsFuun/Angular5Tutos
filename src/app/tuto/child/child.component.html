@@ -3,7 +3,7 @@
     <p class="lead">I'm the child, i want a donut !!!!!</p>
     <hr class="my-4">
 
-    <p *ngIf="task">ok Dad, i'll do <b>{{ task.description }}</b> at <b>{{ task.location }}</b></p>
+    <p *ngIf="task.description && task.location">ok Dad, i'll do <b>{{ task.description }}</b> at <b>{{ task.location }}</b></p>
     
     {{ task | json }}
 </div>
